@@ -1,0 +1,15 @@
+// Зай хэмжээний map
+$spacings: (
+  "0": 0,
+  "sm": rem(8px),
+  "md": rem(16px),
+  "lg": rem(24px),
+  "xl": rem(32px)
+);
+
+// @each ашиглан margin болон padding utility классуудыг автомат үүсгэх
+@each $key, $value in $spacings {
+  .m-#{$key}  { margin: $value !important; }
+  .mt-#{$key} { margin-top: $value !important; }
+  .p-#{$key}  { padding: $value !important; }
+}

@@ -1,0 +1,62 @@
+$colors: (
+  "primary": #008080,
+  "primary-hover": #005959,
+  "secondary": #6c757d,
+  "bg-color": #f4f7f6,
+  "card-bg": #ffffff,
+  "text-color": #333333,
+  "border-color": #cccccc,
+  "shadow": 0 4px 8px rgba(0, 0, 0, 0.085),
+  "white": #ffffff,
+  "badge-bg": #e74c3c
+);
+
+$colors-dark: (
+  "primary": #2dd4bf,
+  "primary-hover": #14b8a6,
+  "secondary": #94a3b8,
+  "bg-color": #0f172a,
+  "card-bg": #1e293b,
+  "text-color": #f8fafc,
+  "border-color": #334155,
+  "shadow": 0 4px 12px rgba(0, 0, 0, 0.4),
+  "white": #ffffff,
+  "badge-bg": #e74c3c
+);
+
+$radii: (
+  "sm": 4px,
+  "md": 6px,
+  "lg": 10px,
+  "xl": 20px,
+  "full": 9999px
+);
+
+$breakpoints: (
+  "sm": 576px,
+  "md": 768px,
+  "lg": 900px,
+  "xl": 1200px
+);
+
+:root {
+  @each $key, $value in $colors {
+    --#{$key}: #{$value};
+  }
+
+  @each $key, $value in $radii {
+    --radius-#{$key}: #{$value};
+  }
+
+  @each $key, $value in $breakpoints {
+    --breakpoint-#{$key}: #{$value};
+  }
+
+  --font-family: 'Roboto', sans-serif;
+}
+
+[data-theme="dark"] {
+  @each $key, $value in $colors-dark {
+    --#{$key}: #{$value};
+  }
+}

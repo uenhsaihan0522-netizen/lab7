@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лаборатори 07: </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1 class="page-title">Хэрэглэгчийн Бүртгэлийн Хуудас</h1>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="../index.html" class="nav-item">Нүүр</a></li>
+                <li><a href="#personal-info" class="nav-item">Анкет засах</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+                <button id="theme-toggle" class="btn-theme-toggle" aria-label="Dark mode солих">
+                    <!-- SVG дүрс болон текст -->
+                      <svg width="20" height="20" ...>...</svg>
+                      <span>Dark mode</span>
+                </button>
+    </div>
+    </header>
+    <div class="page-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h3>Хурдан холбоос</h3>
+            <ul class="sidebar-menu">
+                <li><a href="#interests">Миний сонирхол</a></li>
+                <li><a href="#personal-info">Хувийн мэдээлэл</a></li>
+                <li><a href="#education">Боловсрол</a></li>
+                <li><a href="#media-section">3D & Видео</a></li>
+                <li><a href="#grades">Миний дүн</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            
+            <!-- Лаборатори 6: 3D Flip Card хэсэг -->
+            <section class="section-container" id="media-section">
+                <div class="section-title-wrapper">
+                    <h2 class="section-title">3D Flip Card & Видео танилцуулга</h2>
+                </div>
+                
+                <div class="media-grid-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+                    <!-- 3D Flip Card -->
+                    <div class="flip-card" tabindex="0">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                </svg>
+                                <h3>БШУЯ</h3>
+                                <p>Эргүүлж харахын тулд хулганаар зөөнө үү.</p>
+                            </div>
+                            <div class="flip-card-back">
+                               <img src="logo.jpg" alt="Сургалтын зураг" width="410" height="220">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Хүртээмжтэй Видео Суулгах -->
+                    <div class="video-container" style="background: var(--card-bg, #fff); padding: 1rem; border-radius: 12px; border: 1px solid var(--border-color, #e2e8f0);">
+                        <h4 style="margin-top: 0; margin-bottom: 0.5rem;"></h4>
+                        <video controls width="100%" poster="img/poster.jpg" style="border-radius: 8px;">
+                            <source src="video.mp4" type="video/mp4">
+                            <source src="video/clip.webm" type="video/webm">
+                        </video>
+                    </div>
+                </div>
+            </section>
+
+            <article class="card">
+                <header class="section-header">
+                    <h2 class="section-title">Хэрэглэгчийн анкет бөглөх</h2>
+                    <p class="section-desc">Доорх формын дагуу мэдээллээ бүрэн, үнэн зөв бөглөнө үү.</p>
+                </header>
+                
+                <!-- Форм -->
+                <form action="#" method="POST" enctype="multipart/form-data" class="registration-form">
+                    
+                    <!-- 3 баганатай Form Grid -->
+                    <div class="form-grid">
+                        
+                        <!-- 1. Сонирхлын Жагсаалт -->
+                        <fieldset class="form-fieldset" id="interests">
+                            <legend class="form-legend">Миний сонирхол</legend>
+                            <div class="checkbox-group">
+                                <label for="sports"><input type="checkbox" id="sports" name="hobby" value="sports"> Спорт</label>
+                                <label for="travel"><input type="checkbox" id="travel" name="hobby" value="travel"> Аялал</label>
+                                <label for="music"><input type="checkbox" id="music" name="hobby" value="music"> Хөгжим сонсох</label>
+                                <label for="reading"><input type="checkbox" id="reading" name="hobby" value="reading"> Ном унших</label>
+                                <label for="gaming"><input type="checkbox" id="gaming" name="hobby" value="gaming"> Видео тоглоом</label>
+                                <label for="movies"><input type="checkbox" id="movies" name="hobby" value="movies"> Кино үзэх</label>
+                                <label for="art"><input type="checkbox" id="art" name="hobby" value="art"> Зураг зурах</label>
+                                <label for="cooking"><input type="checkbox" id="cooking" name="hobby" value="cooking"> Хоол хийх</label>
+                                <label for="photography"><input type="checkbox" id="photography" name="hobby" value="photography"> Гэрэл зураг</label>
+                            </div>
+                        </fieldset>
+
+                        <!-- 2. Хувийн мэдээлэл -->
+                        <fieldset class="form-fieldset" id="personal-info">
+                            <legend class="form-legend">Хувийн мэдээлэл</legend>
+                            <div class="form-group">
+                                <label for="surname" class="form-label">Овог</label>
+                                <input type="text" id="surname" name="surname" class="form-input" placeholder="Овог" required minlength="2">
+                            </div>
+                            <div class="form-group">
+                                <label for="username" class="form-label">Нэр</label>
+                                <input type="text" id="username" name="username" class="form-input" placeholder="Нэр" required minlength="2">
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Цахим хаяг:</label>
+                                <input type="email" id="email" name="email" class="form-input" placeholder="example@domain.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="userpassword" class="form-label">Нууц үг:</label>
+                                <input type="password" id="userpassword" name="userpassword" class="form-input" required pattern="(?=.*\d)(?=.*[a-z]).{8,}" placeholder="********">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Утасны дугаар:</label>
+                                <input type="tel" id="phone" name="phone" class="form-input" pattern="[0-9]{8}" placeholder="********" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="dob" class="form-label">Төрсөн огноо:</label>
+                                <input type="date" id="dob" name="dob" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Хүйс:</label>
+                                <div class="radio-group">
+                                    <label for="male"><input type="radio" id="male" name="gender" value="male"> Эрэгтэй</label>
+                                    <label for="female"><input type="radio" id="female" name="gender" value="female"> Эмэгтэй</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="city" class="form-label">Оршин суугаа аймаг/хот:</label>
+                                <select id="city" name="city" class="form-select" required>
+                                    <option value="">-- Сонгох --</option>
+                                    <option value="ub">Улаанбаатар хот</option>
+                                    <option value="arhangai">Архангай</option>
+                                    <option value="Bayan-Olgii">Баян-Өлгий</option>
+                                    <option value="bayanhongor">Баянхонгор</option>
+                                    <option value="bulgan">Булган</option>
+                                    <option value="govi-altai">Говь-Алтай</option>
+                                    <option value="govisumber">Говьсүмбэр</option>
+                                    <option value="darkhan-uul">Дархан-Уул</option>
+                                    <option value="dornogovi">Дорноговь</option>
+                                    <option value="dornod">Дорнод</option>
+                                    <option value="dundgovi">Дундговь</option>
+                                    <option value="zavkhan">Завхан</option>
+                                    <option value="orkhon">Орхон</option>
+                                    <option value="ovorkhangai">Өвөрхангай</option>
+                                    <option value="umnugovi">Өмнөговь</option>
+                                    <option value="sukhbaatar">Сүхбаатар</option>
+                                    <option value="selenge">Сэлэнгэ</option>
+                                    <option value="tuv">Төв</option>
+                                    <option value="uvs">Увс</option>
+                                    <option value="khovd">Ховд</option>
+                                    <option value="khovsgol">Хөвсгөл</option>
+                                    <option value="khentii">Хэнтий</option>
+                                </select>
+                            </div>
+                        </fieldset> 
+
+                        <!-- 3. Боловсрол ба Сонирхол -->
+                        <fieldset class="form-fieldset" id="education">
+                            <legend class="form-legend">Боловсрол ба Технологи</legend>
+                            <div class="form-group">
+                                <label for="university" class="form-label">Сургууль:</label>
+                                <select id="university" name="university" class="form-select" required>
+                                    <option value="">-- Сургууль сонгох --</option>
+                                    <option value="muis">Монгол Улсын Их Сургууль (МУИС)</option>
+                                    <option value="shutis">Шинжлэх Ухаан, Технологийн Их Сургууль (ШУТИС)</option>
+                                    <option value="mubis">Монгол Улсын Боловсролын Их Сургууль (МУБИС)</option>
+                                    <option value="ashuis">Анагаахын Шинжлэх Ухааны Үндэсний Их Сургууль (АШҮҮИС)</option>
+                                    <option value="haais">Хөдөө Аж Ахуйн Их Сургууль (ХААИС)</option>
+                                    <option value="suis">Соёл Урлагийн Их Сургууль (СУИС)</option>
+                                    <option value="dhis">Монгол Улсын Дотоод Хэргийн Их Сургууль (ДХИС)</option>
+                                    <option value="ubhis">Үндэсний Батлан Хамгаалахын Их Сургууль (ҮБХИС)</option>
+                                    <option value="hsis">Хууль Сахиулахын Их Сургууль</option>
+                                    <option value="sezis">Санхүү Эдийн Засгийн Их Сургууль (СЭЗИС)</option>
+                                    <option value="utis">Үндэсний Техникийн Их Сургууль</option>
+                                    <option value="otgontenger">Отгонтэнгэр Их Сургууль</option>
+                                    <option value="mandakh">Мандах Их Сургууль</option>
+                                    <option value="khuree">Хүрээ Мэдээлэл Холбооны Технологийн Дээд Сургууль</option>
+                                    <option value="miu">Монголын Олон Улсын Дээд Сургууль (MIU)</option>
+                                    <option value="ouuis">Олон Улсын Улаанбаатарын Их Сургууль (Оууис)</option>
+                                    <option value="ikh-zasaq">Их Засаг Олон Улсын Их Сургууль</option>
+                                    <option value="etugen">Этүгэн Их Сургууль</option>
+                                    <option value="shihitug">Шихихутуг Их Сургууль</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="degree" class="form-label">Түвшин:</label>
+                                <select id="degree" name="degree" class="form-select" required>
+                                    <option value="">-- Сонгоно уу --</option>
+                                    <option value="bachelor">Бакалавр</option>
+                                    <option value="master">Магистр</option>
+                                    <option value="doctor">Докторант</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Сонирхож буй технологиуд:</label>
+                                <div class="checkbox-group">
+                                    <label for="html"><input type="checkbox" id="html" name="skills" value="HTML"> HTML5/CSS3</label>
+                                    <label for="js"><input type="checkbox" id="js" name="skills" value="JavaScript"> JS</label>
+                                    <label for="python"><input type="checkbox" id="python" name="skills" value="Python"> Python</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="avatar" class="form-label">Профайл зураг:</label> 
+                                <input type="file" id="avatar" name="avatar" class="form-file" accept="image/*">
+                            </div>
+                            <div class="form-group">
+                                <label for="bio" class="form-label">Өөрийн тухай:</label>
+                                <textarea id="bio" name="bio" class="form-textarea" rows="3" placeholder="Товч танилцуулга..."></textarea>
+                            </div>
+                        </fieldset>
+
+                    </div>
+
+                    <!-- Button Group (Flexbox) -->
+                    <div class="button-group">
+                        <button type="submit" class="btn btn-primary">Анкет Илгээх</button>
+                        <button type="reset" class="btn btn-secondary">Дахин эхлүүлэх</button>
+                    </div>
+                </form>
+            </article>
+
+            <!-- Дүнгийн хэсэг (3 баганатай Grid Card + Stagger Animation [--i]) -->
+            <section class="section-container table-section" id="grades">
+                <div class="section-title-wrapper">
+                    <h2 class="section-title">Миний дүн</h2>
+                    <span class="badge-wrapper">
+                        <span class="badge">Шинэчилсэн</span>
+                        <span class="tooltip-text">2026 оны хаврын улирлын дүн</span>
+                    </span>
+                </div>
+                
+                <!-- 3 баганатай Grid Картууд (Stagger effect ашиглахын тулд style="--i: n" өгсөн) -->
+                <div class="grades-grid">
+                    <div class="grade-card stagger-item" style="--i: 1;">
+                        <h4>Программчлалын үндэс</h4>
+                        <p class="score">98</p>
+                    </div>
+                    <div class="grade-card stagger-item" style="--i: 2;">
+                        <h4>Дискрет бүтэц</h4>
+                        <p class="score">98</p>
+                    </div>
+                    <div class="grade-card stagger-item" style="--i: 3;">
+                        <h4>Компьютерийн сүлжээ</h4>
+                        <p class="score">90</p>
+                    </div>
+                    <div class="grade-card stagger-item" style="--i: 4;">
+                        <h4>Биеийн тамир</h4>
+                        <p class="score">100</p>
+                    </div>
+                    <div class="grade-card stagger-item" style="--i: 5;">
+                        <h4>Магадлал статистик</h4>
+                        <p class="score">90</p>
+                    </div>
+                    <div class="grade-card stagger-item" style="--i: 6;">
+                        <h4>Веб зохиомж</h4>
+                        <p class="score">95</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <p>&copy; 2026 Веб зохиомжийн хичээл. Бүх эрх хуулиар хамгаалагдсан.</p>
+    </footer>
+
+    <!-- JavaScript холбох -->
+    <script src="script.js"></script>
+</body>
+</html>
